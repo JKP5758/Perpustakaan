@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,700&display=swap');
+
+:root {
+    --bg: #FFFBF5;
+    --primary: #4B49AC;
+    --secondary: #98BDFF;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: aliceblue;
+}
+
+.container {
+    width: 80%;
+    margin: 8rem auto;
+    text-align: center;
+
+}
+
+.container .row {
+    padding: 2rem rem;
+    border-radius: 1rem;
+    background-color: white;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card-tittle {
+    display: flex;
+    /* border-bottom: 1px solid; */
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 2rem;
+    opacity: 60%;
+    margin: 2rem 0;
+    padding-top: 1rem;
+}
+
+
+.container .tambah-menu {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 1.2rem;
+}
+
+.container .tambah-menu a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+}
+
+.container .row .table {
+    flex: 1 !important;
+    border: 0.5px #fff;
+    border-radius: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-collapse: collapse;
+}
+
+.container .row .table thead {
+    border-radius: 20px;
+}
+
+table th,
+table td {
+    font-family: 'Karla', sans-serif;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+table th {
+    background-color: var(--primary);
+    color: #FFFBF5;
+}
+
+.container table td .btn-aksi {
+    display: inline-flex;
+    background-color: var(--secondary);
+    border-radius: .6rem;
+    padding: .5rem 1rem;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.container table td .btn-aksi:hover {
+    background-color: #4fc7ef;
+}
+
+.action {
+    width: 10rem;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.dashboard .baris {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard .baris .col {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.dashboard .baris .col .card {
+    border-radius: 0.6rem;
+    box-shadow: 0px 0px 0.6rem rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.dashboard .baris .col .card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard .baris .col .card h3 {
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+.dashboard .baris .col .card p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.dashboard .card-siswa {
+    background-color: #ff9f43;
+    color: #fff;
+}
+
+.dashboard .card-transaksi {
+    background-color: #4bcffa;
+    color: #fff;
+}
+
+.dashboard .card-kelas {
+    background-color: #fc5c65;
+    color: #fff;
+}
+
+.dashboard .card-uang {
+    background-color: #6c5ce7;
+    color: #fff;
+}
+
+/* Table Pembayaran */
+
+.pencarian {
+    font-family: 'Karla', sans-serif;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.pencarian table {
+    width: 100%;
+    margin: 1rem 1rem;
+    height: auto;
+}
+
+
+.pencarian table input {
+    justify-content: start;
+    border: none;
+    padding: 0.5rem;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    /* background-color: #4B49AC; */
+    color: black;
+    width: 100%;
+    height: 3rem;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.pencarian table input:focus {
+    box-shadow: 10px 12px 30px -15px rgba(85, 30, 250, 1);
+}
+
+.pencarian table input::placeholder {
+    color: black;
+}
+
+.pencarian .cari {
+    width: 10%;
+}
+
+.pencarian button {
+    display: flex;
+    margin-left: 10px;
+    padding: 0.8rem 0.8rem;
+    justify-content: center;
+    border: none;
+    color: var(--bg);
+    background-color: #7264ef;
+    border-radius: 0.8rem;
+    transition: 0.4s;
+}
+
+.pencarian button:hover {
+    background-color: #4B49AC;
+}
+
+/* Biodata */
+.biodata {
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    background-color: #FFFf;
+
+}
+
+.judul-biodata {
+    border-radius: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 5rem;
+    margin-bottom: 1rem;
+    background-color: #7264ef;
+    color: #FFF;
+}
+
+.biodata .table-biodata {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.biodata .table-biodata table {
+    margin: auto;
+    width: 80%;
+    justify-content: center;
+}
+
+.biodata .table-biodata tr {
+    height: 2rem;
+    margin: 1rem;
+}
+
+.biodata .table-biodata td {
+    font-size: 1.2rem;
+    width: 8rem;
+}
+
+/* Detail */
+.detail-siswa {
+    width: 100%;
+    background-color: white;
+}
+
+.detail-siswa .judul-detail {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    padding: 1rem;
+    margin-top: 3rem;
+    background-color: #7264ef;
+    border-radius: 0.5rem;
+}
+
+.detail-siswa table {
+    width: 100%;
+    height: 100%;
+}
+
+
+.detail-siswa table thead tr th {
+    border-radius: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.detail-siswa table tbody tr td {
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.detail-siswa .table-detail a {
+    border-radius: 0.4rem;
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 1px solid;
+}
+
+.detail-siswa .table-detail h4 {
+    font-size: 1rem;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    padding: 0.5rem;
+    color: #1f1e1e;
+    /* border: 1px solid; */
+}
+
+.detail-siswa .table-detail a:hover {
+    background-color: var(--secondary);
+}
+
+/* History */
+.cari-bulan {
+    display: flex;
+    justify-content: end;
+    height: 40px;
+}
+
+.cari-bulan form label {
+    font-weight: 500;
+    font-size: medium;
+    margin-right: 0.5rem;
+}
+
+.cari-bulan form select {
+    padding: 0.3rem;
+    border-radius: 0.6rem;
+    width: 10rem;
+    margin-right: 0.5rem;
+    background-color: aliceblue;
+}
+
+.cari-bulan form button {
+    background-color: var(--primary);
+    padding: 0.45rem;
+    width: 4.5rem;
+    border-radius: 0.6rem;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+
+.cari-bulan form button:hover {
+    background-color: var(--secondary);
+    transition: 0.3s;
+    color: #212121;
+}
+
+/* Laporan */
+.container .laporan th {
+    font-size: 1rem;
+}
+
+.container .laporan td {
+    font-size: 1rem;
+}
+
+.container .laporan select,
+.container .laporan input[type=date] {
+    width: 60%;
+    padding: 0.5rem;
+}
+
+.container .laporan button {
+    width: 30%;
+    padding: 0.5rem;
+    border: none;
+    color: #fff;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    background-color: #7264ef;
+    transition: 0.3s;
+}
+
+.container .laporan button:hover {
+    background-color: #4B49AC;
+
+}
