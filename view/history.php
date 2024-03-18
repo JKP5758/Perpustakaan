@@ -75,9 +75,9 @@ if (!isset($_SESSION['username'])) {
                     if (isset($id_user)) {
                         if ($_SESSION['leveluser'] == 'admin' || $_SESSION['leveluser'] == 'petugas') {
                             if ($id_user == "0"){
-                                $query = mysqli_query($koneksi, "SELECT user.nama, buku.nama_buku, petugas.nama_petugas, data_history.tanggal, data_history.status FROM data_history INNER JOIN user ON data_history.id_user = user.id_user INNER JOIN buku ON data_history.id_buku = buku.id_buku INNER JOIN petugas ON data_history.id_petugas = petugas.id_petugas ORDER BY `data_history`.`tanggal` DESC");
+                                $query = mysqli_query($koneksi, "SELECT user.nama, buku.nama_buku, petugas.nama_petugas, data_history.tanggal, data_history.jumlah, data_history.status FROM data_history INNER JOIN user ON data_history.id_user = user.id_user INNER JOIN buku ON data_history.id_buku = buku.id_buku INNER JOIN petugas ON data_history.id_petugas = petugas.id_petugas ORDER BY `data_history`.`tanggal` DESC");
                             } else {
-                                $query = mysqli_query($koneksi, "SELECT user.nama, buku.nama_buku, petugas.nama_petugas, data_history.tanggal, data_history.status FROM data_history INNER JOIN user ON data_history.id_user = user.id_user INNER JOIN buku ON data_history.id_buku = buku.id_buku INNER JOIN petugas ON data_history.id_petugas = petugas.id_petugas WHERE data_history.id_user = '$id_user' ORDER BY `data_history`.`tanggal` DESC");
+                                $query = mysqli_query($koneksi, "SELECT user.nama, buku.nama_buku, petugas.nama_petugas, data_history.tanggal, data_history.jumlah, data_history.status FROM data_history INNER JOIN user ON data_history.id_user = user.id_user INNER JOIN buku ON data_history.id_buku = buku.id_buku INNER JOIN petugas ON data_history.id_petugas = petugas.id_petugas WHERE data_history.id_user = '$id_user' ORDER BY `data_history`.`tanggal` DESC");
                             }
 
                             $baris = mysqli_num_rows($query);

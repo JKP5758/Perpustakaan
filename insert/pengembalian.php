@@ -47,9 +47,7 @@ if (!isset($_SESSION['username'])) {
 
             </div>
             <div class="row">
-                
-
-                <form action="prosespembayaran.php" method="POST">
+                <form action="prosespengembalian.php" method="POST">
                     <div class="input-group">
                         <label for="">ID Pengembalian</label>
                         <input type="text" name="id_pengembalian" readonly value="<?= $id_pengembalian ?>">
@@ -60,19 +58,24 @@ if (!isset($_SESSION['username'])) {
                     </div>
                     <div class="input-group">
                         <label for="">Nama User</label>
-                        <input type="text" name="nama_siswa" readonly value="<?= $nama_user ?>">
+                        <input type="text" name="nama_user" readonly value="<?= $nama_user ?>">
                     </div>
                     <div class="input-group">
                         <label for="">Nama Buku</label>
+                        <input type="hidden" name='id_buku' value='<?= $id_buku ?>'>
                         <input type="text" name="nama_buku" readonly value="<?= $nama_buku ?>">
                     </div>
                     <div class="input-group">
                         <label for="">Jumlah Buku yang di Pinjam</label>
-                        <input type="number" nama="jumlah_p" readonly value="<?= $jumlah ?>">
+                        <input type="number" name="jumlah_p" readonly value="<?= $jumlah ?>">
                     </div>
                     <div class="input-group">
                         <label for="">Jumlah Buku yang di Kebalikan</label>
-                        <input type="number" nama="jumlah_k" value="1" min="1" max="<?= $jumlah ?>">
+                        <input type="number" name="jumlah_k" value="1" min="1" max="<?= $jumlah ?>">
+                    </div>
+                    <div class="input-group">
+                        <label>Tanggal Buku di Pinjam</label>
+                        <input type="date" name="tanggal_p" readonly value="<?php echo $tanggal_p; ?>">
                     </div>
                     <div class="input-group">
                         <label>Tanggal Buku di Kembalikan</label>

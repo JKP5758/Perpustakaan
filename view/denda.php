@@ -33,7 +33,7 @@ if (!isset($_SESSION['username'])) {
 
     <div class="container">
         <div class="card-tittle">
-            <h4>Data Peminjaman</h4>
+            <h4>Data Denda</h4>
         </div>
 
         <div class="pencarian">
@@ -104,13 +104,13 @@ if (!isset($_SESSION['username'])) {
                 <!-- Data Detail Tagihan Siswa -->
                 <?php
                 $id = $data['id_user'];
-                $data_bayar = mysqli_query($koneksi, "SELECT data_pinjam.id, user.nama, buku.id_buku, buku.nama_buku, petugas.id_petugas, petugas.nama_petugas, data_pinjam.tanggal, data_pinjam.jumlah_pinjam, data_pinjam.jumlah_kembali, data_pinjam.status FROM data_pinjam INNER JOIN user ON data_pinjam.id_user = user.id_user INNER JOIN buku ON data_pinjam.id_buku = buku.id_buku INNER JOIN petugas ON data_pinjam.id_petugas = petugas.id_petugas WHERE data_pinjam.id_user = '$_GET[id]' ORDER BY id DESC");
+                $data_bayar = mysqli_query($koneksi, "SELECT data_denda.id_denda, user.nama, buku.id_buku, buku.nama_buku, petugas.id_petugas, petugas.nama_petugas, data_pinjam.tanggal, data_pinjam.jumlah_pinjam, data_pinjam.jumlah_kembali, data_pinjam.status FROM data_pinjam INNER JOIN user ON data_pinjam.id_user = user.id_user INNER JOIN buku ON data_pinjam.id_buku = buku.id_buku INNER JOIN petugas ON data_pinjam.id_petugas = petugas.id_petugas INNER JOIN data_denda ON data_denda.id_user = user.id_user WHERE data_pinjam.id_user = '105' ORDER BY id DESC;");
                 $i = 1;
                 ?>
 
                 <div class="detail-siswa">
                     <div class="judul-detail">
-                        <h2>Detail Peminjaman</h2>
+                        <h2>Detail Denda</h2>
                     </div>
 
                     <div class="table-detail">

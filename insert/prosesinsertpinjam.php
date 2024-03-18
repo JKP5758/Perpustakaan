@@ -13,7 +13,7 @@ $id_petugas = $_SESSION['id'];
 if (empty($user) || empty($buku) || empty($jumlah) || empty($petugas) || empty($id_petugas) || empty($tanggal)){
     echo "<script> alert('Data Tidak Boleh Kosong!!!'); window.location.href = 'pinjam.php';</script> ";
 } else {
-    $insert = mysqli_query($koneksi, "INSERT INTO data_pinjam (id_user, id_buku, jumlah, id_petugas, tanggal, status) VALUES ('$user','$buku','$jumlah','$id_petugas', '$tanggal','Di Pinjam')");
+    $insert = mysqli_query($koneksi, "INSERT INTO data_pinjam (id_user, id_buku, jumlah_pinjam, id_petugas, tanggal, status) VALUES ('$user','$buku','$jumlah','$id_petugas', '$tanggal','Di Pinjam')");
 
     $insert = mysqli_query($koneksi, "INSERT INTO data_history (id_user, id_buku, jumlah, id_petugas, tanggal, status) VALUES ('$user','$buku','$jumlah','$id_petugas', '$tanggal','Di Pinjam')");
 

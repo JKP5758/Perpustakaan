@@ -10,7 +10,8 @@ if ($_SESSION['leveluser'] == "admin") {
             <a href="../view/buku.php">Buku</a>
             <a href="../view/petugas.php">Petugas</a>
             <a href="../insert/pinjam.php"> Pinjam Buku</a>
-            <a href="../view/peminjaman.php">Data Peminjaman</a>
+            <a href="../view/peminjaman.php">Peminjaman</a>
+            <a href="../view/denda.php">Denda</a>
             <a href="../view/history.php">History</a>
             <a href="../view/laporan.php">Laporan</a>
             <a href="../login/logout.php">Logout</a>

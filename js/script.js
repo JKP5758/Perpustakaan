@@ -65,7 +65,7 @@ document.getElementById('rusak').addEventListener('change', function() {
 document.getElementsByName('jumlah_rusak')[0].addEventListener('input', function() {
   var dendaInput = document.getElementsByName('denda_kerusakan')[0];
   var totalDendaInput = document.getElementsByName('total_denda')[0];
-  var totalDendaRusak = dendaPerBuku * parseInt(this.value);
+  totalDendaRusak = dendaPerBuku * parseInt(this.value);
   dendaInput.value = 'Rp.' + totalDendaRusak;
   var SemuaDenda = parseInt(denda_terlambat) + parseInt(totalDendaRusak);
   totalDendaInput.value = 'Rp.' + SemuaDenda;
@@ -75,8 +75,8 @@ document.getElementsByName('jumlah_rusak')[0].addEventListener('input', function
 
 
 var denda_terlambat = 0;
-// Tanggal seharusnya dalam format 'yyyy-mm-dd'
-var tanggalSeharusnya = '2024-01-10';
+
+var tanggalSeharusnya = document.getElementsByName('tanggal_p')[0].value;
 
 document.getElementsByName('tanggal_k')[0].addEventListener('change', function() {
     var tanggalKembali = new Date(this.value);
